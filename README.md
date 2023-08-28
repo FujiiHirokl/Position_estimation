@@ -1,49 +1,52 @@
-# Trilateration Position Estimation with Random Perturbations
+# ランダムな摂動を用いたトライランデーション位置推定
 
-This repository contains a Python script that demonstrates trilateration-based position estimation using random perturbations. Trilateration is a technique used to estimate a point's position in a two-dimensional space based on its distances from three reference points.
+このリポジトリには、ランダムな摂動を用いてトライランデーションに基づく位置推定を実演するPythonスクリプトが含まれています。トライランデーションは、三つの参照点からの距離に基づいて、二次元空間内の点の位置を推定するための技術です。
 
-## Overview
+## 概要
 
-Trilateration is a common technique used in positioning systems, such as GPS. This script illustrates how trilateration works in a simplified scenario. It uses four measurement points located in a 2D plane, where each measurement point has a known position and is associated with a distance value plus a random perturbation. The script then estimates the user's clicked position based on the distances and reference points.
+トライランデーションは、GPSなどの位置決めシステムで一般的に使用される技術です。このスクリプトは、トライランデーションがどのように動作するかを簡略化されたシナリオで示しています。2D平面に配置された四つの計測点を使用し、各計測点は既知の位置と、距離値にランダムな摂動が関連付けられています。次に、距離と参照点に基づいてユーザーのクリックした位置を推定します。
 
-## Usage
+## 使用方法
 
-1. **Clone or Download**: Clone or download this repository to your local machine.
+1. **クローンまたはダウンロード**: このリポジトリをローカルマシンにクローンまたはダウンロードします。
 
-2. **Install Dependencies**: Make sure you have Python and the required packages installed. You can install the necessary packages using the following command:
+2. **依存関係のインストール**: Pythonと必要なパッケージがインストールされていることを確認してください。次のコマンドを使用して必要なパッケージをインストールできます：
 
+'''
 pip install numpy matplotlib
+'''
 
 
-3. **Run the Script**: Run the `trilateration.py` script using the following command:
+3. **スクリプトの実行**: 以下のコマンドを使用して `trilateration.py` スクリプトを実行します：
 
+'''
 python trilateration.py
+'''
 
 
-4. **Follow Instructions**: Follow the on-screen instructions. Click on the plot to specify the position you want to estimate. You can exit the loop by right-clicking or pressing 'q'.
+4. **指示に従う**: 画面上の指示に従います。推定したい位置を指定するためにプロット上をクリックします。ループを終了するには、右クリックまたは 'q' キーを押します。
 
-## Dependencies
+## 依存関係
 
-- [NumPy](https://numpy.org/): A library for numerical computations in Python.
-- [Matplotlib](https://matplotlib.org/): A 2D plotting library for Python.
+- [NumPy](https://numpy.org/): Pythonでの数値計算のためのライブラリ。
+- [Matplotlib](https://matplotlib.org/): Pythonの2Dプロットライブラリ。
 
-## How It Works
+## 動作原理
 
-1. The script sets up the measurement points' coordinates and plots them.
+1. スクリプトは計測点の座標を設定し、それらをプロットします。
 
-2. The user clicks on the plot to specify the position they want to estimate.
+2. ユーザーはプロット上で推定したい位置を指定します。
 
-3. Random perturbations are added to the distances between the clicked position and the measurement points.
+3. クリックした位置と計測点との距離にランダムな摂動が追加されます。
 
-4. Trilateration is performed four times using different combinations of three reference points and their associated distances.
+4. 三つの参照点とそれに関連する距離の異なる組み合わせを使用してトライランデーションが四回実行されます。
 
-5. The estimated positions and distances from the clicked position are displayed for each trilateration calculation.
+5. 各トライランデーション計算ごとに、推定位置とクリックした位置からの距離が表示されます。
 
-6. The plot is updated to show the reference points, estimated positions, clicked position, and circles representing the distances.
+6. プロットは、参照点、推定位置、クリックした位置、および距離を表す円を表示するために更新されます。
 
-7. The loop continues until the user exits.
+7. ユーザーが終了するまでループが続行されます。
 
-## License
+## ライセンス
 
-This project is licensed under the [MIT License](LICENSE).
-
+このプロジェクトは [MITライセンス](LICENSE) の下で提供されています。
